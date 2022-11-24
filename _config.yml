@@ -30,24 +30,24 @@ comments:
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  path                   : # blank (default) uses feed.xml
+#staticman:
+#  allowedFields          : ['name', 'email', 'url', 'message']
+#  branch                 : "gh-pages" # "master", "gh-pages"
+#  commitMessage          : "New comment."
+#  filename               : comment-{@timestamp}
+#  format                 : "yml"
+#  moderation             : true
+#  path                   : "_data/comments/{options.slug}"
+#  requiredFields         : ['name', 'email', 'message']
+#  transforms:
+#    email                : "md5"
+#  generatedFields:
+#    date:
+#      type               : "date"
+#      options:
+#        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+#atom_feed:
+#  path                   : # blank (default) uses feed.xml
 
 # SEO Related
 google_site_verification :
@@ -71,11 +71,11 @@ social:
   links: # An array of links to social media profiles
 
 
-# Analytics
-analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
-  google:
-    tracking_id          :
+## Analytics
+#analytics:
+#  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+#  google:
+#    tracking_id          :
 
 
 # Site Author
@@ -199,7 +199,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: true
       share: true
       related: true
   # _pages
@@ -209,15 +209,15 @@ defaults:
     values:
       layout: single
       author_profile: true
-   # _teaching
-   - scope:
-       path: ""
-       type: teaching
-     values:
-       layout: single
-       author_profile: true
-       share: false
-       comments: false
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
   # _publications
   - scope:
       path: ""
@@ -226,7 +226,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comments: false
+      comments: true
   # _portfolio
   - scope:
       path: ""
@@ -235,16 +235,16 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: false
-   # _talks
-   - scope:
-       path: ""
-       type: talks
-     values:
-       layout: talk
-       author_profile: true
-       share: true
-
+      comment: true
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
+      
 # Sass/SCSS
 sass:
   sass_dir: _sass
