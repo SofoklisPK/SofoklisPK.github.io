@@ -170,7 +170,7 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-#  enable_coderay: false
+  enable_coderay: false
 
 
 # Collections
@@ -191,17 +191,17 @@ collections:
 
 # Defaults
 defaults:
-#  # _posts
-#  - scope:
-#      path: ""
-#      type: posts
-#    values:
-#      layout: single
-#      author_profile: true
-#      read_time: true
-#      comments: true
-#      share: true
-#      related: true
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
   # _pages
   - scope:
       path: ""
@@ -216,17 +216,17 @@ defaults:
      values:
        layout: single
        author_profile: true
-       share: true
-       comments: true
-#  # _publications
-#  - scope:
-#      path: ""
-#      type: publications
-#    values:
-#      layout: single
-#      author_profile: true
-#      share: true
-#      comments: true
+       share: false
+       comments: false
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: false
   # _portfolio
   - scope:
       path: ""
@@ -235,7 +235,7 @@ defaults:
       layout: single
       author_profile: true
       share: true
-      comment: true
+      comment: false
    # _talks
    - scope:
        path: ""
